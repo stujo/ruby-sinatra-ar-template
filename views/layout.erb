@@ -1,0 +1,96 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title><%= layout_head_title %></title>
+  <link rel="stylesheet" href="css/foundation.css" />
+  <script src="js/vendor/modernizr.js"></script>
+</head>
+<body>
+
+  <!-- Nav Bar -->
+
+  <div class="row">
+    <div class="large-12 columns">
+      <div class="nav-bar right">
+       <ul class="button-group">
+        <% if auth_authenticated? %>
+        <li><a class="button" href="/logout">Logout</a></li>
+        <% else %>  
+        <li><a class="button" href="/login">Login</a></li>
+        <% end %>
+        <li><a href="/" class="button">Home</a></li>
+      </ul>
+    </div>
+    <h1>My App <small>This is my app. It's awesome.</small></h1>
+    <hr />
+  </div>
+</div>
+
+<!-- End Nav -->
+
+
+
+<!-- Main Page Content and Sidebar -->
+
+<div class="row">
+ 
+  <!-- Main Blog Content -->
+  <div class="large-9 columns" role="content">
+   
+
+    <%= yield %>
+
+
+    
+  </div>
+  
+  <!-- End Main Content -->
+  
+  
+  <!-- Sidebar -->
+  
+  <aside class="large-3 columns">
+   
+   <%= erb :'common/_sidebar', layout: false %>
+   
+ </aside>
+ 
+ <!-- End Sidebar -->
+</div>
+
+<!-- End Main Content and Sidebar -->
+
+
+<!-- Footer -->
+
+<footer class="row">
+  <div class="large-12 columns">
+    <hr />
+    <div class="row">
+      <div class="large-6 columns">
+        <p>© Copyright no one at all. Go to town.</p>
+      </div>
+      <div class="large-6 columns">
+        <ul class="inline-list right">
+          <% if auth_authenticated? %>
+          <li><a href="/logout">Logout</a></li>
+          <% else %>  
+          <li><a href="/login">Login</a></li>
+          <% end %>
+          <li><a href="/">Home</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<script src="js/vendor/jquery.js"></script>
+<script src="js/foundation.min.js"></script>
+<script>
+  $(document).foundation();
+</script>
+</body>
+</html>
