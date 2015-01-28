@@ -20,6 +20,8 @@ GEM
     better_errors (1.1.0)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
+    binding_of_caller (0.7.2)
+      debug_inspector (>= 0.0.1)
     builder (3.2.2)
     capybara (2.4.4)
       mime-types (>= 1.16)
@@ -34,6 +36,7 @@ GEM
       safe_yaml (~> 1.0.0)
     daemons (1.1.9)
     database_cleaner (1.4.0)
+    debug_inspector (0.0.2)
     diff-lcs (1.2.5)
     dotenv (1.0.2)
     erubis (2.7.0)
@@ -123,6 +126,7 @@ DEPENDENCIES
   activerecord (~> 4.1)
   activesupport (~> 4.1)
   better_errors
+  binding_of_caller
   capybara
   database_cleaner
   dotenv

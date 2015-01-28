@@ -4,6 +4,9 @@ Dotenv.load
 rescue
 end
 
+APP_NAME = File.basename(File.dirname(__FILE__))
+puts "Loading #{APP_NAME}"
+
 require 'sinatra'
 
 require 'sinatra/activerecord'

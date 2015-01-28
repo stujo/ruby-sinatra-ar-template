@@ -1,7 +1,7 @@
 development:
   adapter: postgresql
-  database: development_notes
+  database: development_<%= APP_NAME.downcase %>
 
 test:
   adapter: postgresql
-  database: development_notes
+  database: test_<%= APP_NAME.downcase %>
